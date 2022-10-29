@@ -8,6 +8,7 @@
   --brand-background2: #f5f4fa;
   --brand-logo: #000000;
   --brand-color-border: #eeeeee;
+  --color-border-grey: #afb1b8;
   --brand-footer: rgba(255, 255, 255, 0.6);
   --hero-background-fon: rgba(47, 48, 58, 0.4);
 }
@@ -28,6 +29,7 @@ h3,
 p {
   margin: 0;
 }
+
 .studio.current,
 .portfolio.current,
 .contacts.current {
@@ -158,6 +160,7 @@ body,
   margin-right: auto;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-text {
   color: var(--brand-white);
@@ -190,9 +193,8 @@ button:hover,
 button:focus {
   cursor: pointer;
   background: var(--brand-blue);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
+
 /* Button Portfolio html */
 .text-button {
   text-align: center;
@@ -223,14 +225,13 @@ button:focus {
 }
 
 .section2 {
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 
 /* Prtfolio flex block */
 .list-buttons {
   display: flex;
   justify-content: center;
-
   margin-bottom: 56px;
 }
 /* Отступы конопок портфолио */
@@ -285,18 +286,23 @@ button:focus {
   display: flex;
 }
 
+.list-specials .item {
+  width: 270px;
+}
+
 .list-specials .item:not(:last-child) {
   margin-right: 30px;
-  margin-left: auto;
 }
 
-.list-works .item:not(:last-child) {
+.list-works .item:not(:last-child),
+.list-human .item:not(:last-child),
+.clients-list .item:not(:last-child) {
   margin-right: 30px;
 }
 
-.list-human .item:not(:last-child) {
+/* .list-human .item:not(:last-child) {
   margin-right: 30px;
-}
+} */
 
 .list-human .item .photo {
   margin-bottom: 0px;
@@ -357,6 +363,7 @@ button:focus {
   padding-bottom: 30px;
   text-align: center;
 }
+
 /* Photo cards Portfoli*/
 .format-p3-text {
   padding: 20px 24px;
@@ -420,8 +427,14 @@ button:focus {
   display: inline-flex;
 } */
 
-/* .footer-pad {
-} */
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-pad {
+  margin-right: 70px;
+}
 
 .footer-flex {
   display: block;
@@ -429,4 +442,158 @@ button:focus {
 
 .footer-flex .item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+/* --SVG--Social links team, footer */
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--brand-white);
+  fill: var(--color-border-grey);
+  margin-right: 10px;
+  margin-top: 16px;
+}
+
+.team-socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-link:focus,
+.team-social-link:hover {
+  fill: var(--brand-white);
+  background-color: var(--button-main-color);
+}
+
+.footer-social {
+  display: block;
+  /* background-color: tomato; */
+  width: 300px;
+}
+
+.footer-social-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--brand-white);
+  margin-bottom: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+  margin-top: 20px;
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-right: 10px;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--brand-blue);
+}
+
+.footer-social-icon {
+  fill: var(--brand-white);
+}
+
+
+/* ---SVG Clients block --- */
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--brand-black);
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  /* border: 1px solid tomato; */
+  display: flex;
+}
+
+.clients-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border-grey);
+  border-radius: 4px;
+  height: 92px;
+  width: 170px;
+  justify-content: center;
+  cursor: pointer;
+  fill: var(--color-border-grey);
+  margin-right: 30px;
+  padding: 16px 32px;
+}
+
+.clients-item:not(:first-child) {
+  margin-left: 0px;
+}
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  /* outline: 2px dashed #2a2a2a; */
+  /* margin: 0px 32px; */
+}
+.clients-item:hover,
+.clients-item:focus
+.clients-icon:hover,
+.clients-icon:focus {
+  fill: var(--brand-blue);
+  border: 1px solid var(--brand-blue);
+}
+
+/* --SVG chapter - Особлиості */
+/* .feature-item {
+border: 1px solid tomato;
+  display: flex;
+} */
+
+.feature-item {
+  display: block;
+  align-items: center;
+  height: 120px;
+  width: 270px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background-color: var(--brand-background2);
+  border-radius: 4px;
+  padding: 25px 100px;
+
+}
+.feature-item .item:not(:last-child){
+margin-right: 0px;
+}
+
+.feature-svg {
+  width: 70px;
+  height: 70px;
+  /* outline: 2px dashed #2a2a2a; */
 }
