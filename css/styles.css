@@ -116,6 +116,7 @@ body,
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 }
 
 .link,
@@ -136,11 +137,13 @@ body,
 }
 
 /* menu highlighting */
+.header-icon:hover,
 .link:hover,
 .link:focus,
 .nav-link:hover,
 .nav-link:focus {
   color: var(--brand-blue);
+  fill: var(--brand-blue);
 }
 /* Hero site */
 .hero {
@@ -542,22 +545,20 @@ button:focus {
 }
 
 .clients-list {
-  /* border: 1px solid tomato; */
   display: flex;
 }
 
-.clients-item {
+.clients-link {
   display: flex;
-  justify-content: center;
   align-items: center;
   border: 1px solid var(--color-border-grey);
   border-radius: 4px;
   height: 92px;
   width: 170px;
   justify-content: center;
-  cursor: pointer;
   fill: var(--color-border-grey);
   padding: 16px 32px;
+   cursor: pointer;
 }
 
 .clients-item:not(:last-child) {
@@ -574,19 +575,23 @@ button:focus {
   height: 60px;
   /* outline: 2px dashed #2a2a2a; */
 }
-.clients-item:hover,
-.clients-item:focus
-.clients-icon:hover,
-.clients-icon:focus {
+
+.clients-link:hover, 
+.clients-icon:hover {
   fill: var(--brand-blue);
-  border: 1px solid var(--brand-blue);
+}
+
+.clients-link:hover {
+  border: 1px solid var(--brand-blue)
+}
+
+.clients-icon:focus, 
+.clients-link:focus {
+  fill: var(--brand-blue);
+  border: 1px solid var(--brand-blue)
 }
 
 /* --SVG chapter - Особлиості */
-/* .feature-item {
-border: 1px solid tomato;
-  display: flex;
-} */
 
 .feature-item {
   display: block;
@@ -607,4 +612,17 @@ margin-right: 30px;
   width: 70px;
   height: 70px;
   /* outline: 2px dashed #2a2a2a; */
+}
+
+
+
+/* SVG Header icon */
+
+.header-svg {
+  fill: currentColor;
+   width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+    align-items: center;
 }
