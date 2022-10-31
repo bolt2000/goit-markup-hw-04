@@ -264,9 +264,12 @@ button:focus {
   margin-bottom: 0;
 }
 
+.list-photo {
+  display: block;
+}
 
-.flex-list-photos .item:hover,
-.flex-list-photos .item:focus {
+.list-photo:hover,
+.list-photo:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -461,6 +464,7 @@ button:focus {
 .team-social-list {
   display: flex;
   justify-content: center;
+   margin-top: 16px;
 }
 
 .team-social-link {
@@ -472,13 +476,12 @@ button:focus {
   border-radius: 50%;
   background-color: var(--brand-white);
   fill: var(--color-border-grey);
-  margin-right: 10px;
-  margin-top: 16px;
 }
 
-.team-socials-item:not(:last-child) {
-  margin-right: 10px;
+.team-social-item:not(:last-child) {
+margin-right: 10px;
 }
+
 
 .team-social-link:focus,
 .team-social-link:hover {
@@ -515,8 +518,13 @@ button:focus {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  margin-right: 10px;
+  
 }
+
+.footer-social-item:not(:last-child){
+margin-right: 10px;
+}
+
 
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -553,8 +561,6 @@ button:focus {
   width: 170px;
   justify-content: center;
   fill: var(--color-border-grey);
-  padding: 16px 32px;
-   cursor: pointer;
 }
 
 .clients-item:not(:last-child) {
@@ -564,12 +570,6 @@ button:focus {
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.clients-icon {
-  width: 106px;
-  height: 60px;
-  /* outline: 2px dashed #2a2a2a; */
 }
 
 .clients-link:hover, 
@@ -590,34 +590,26 @@ button:focus {
 /* --SVG chapter - Особлиості */
 
 .feature-item {
-  display: block;
+  display: flex;
   align-items: center;
+  justify-content: center;
   height: 120px;
   width: 270px;
   margin-bottom: 30px;
   background-color: var(--brand-background2);
   border-radius: 4px;
-  padding: 25px 100px;
+  
 
 }
 .feature-item .item:not(:last-child){
 margin-right: 30px;
 }
 
-.feature-svg {
-  width: 70px;
-  height: 70px;
-  /* outline: 2px dashed #2a2a2a; */
-}
-
-
 
 /* SVG Header icon */
 
 .header-svg {
   fill: currentColor;
-   width: 16px;
-    height: 16px;
     margin-right: 10px;
     vertical-align: middle;
     align-items: center;
